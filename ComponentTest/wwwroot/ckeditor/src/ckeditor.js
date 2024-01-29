@@ -68,37 +68,24 @@ Editor.builtinPlugins = [
 Editor.defaultConfig = {
 	toolbar: {
 		items: [
-			'bold',
-			'italic',
-			'underline',
-			'link',
-			'bulletedList',
-			'numberedList',
-			'alignment',
-			'undo',
-			'redo',
-			'|',
-			'blockQuote',
-			'insertTable',
-			'mediaEmbed',
-			'fontBackgroundColor',
-			'fontColor',
-			'fontFamily',
-			'fontSize',
-			'horizontalLine',
-			'todoList'
+			'undo', 'redo',
+			'|', 'heading',
+			'|', 'bold', 'italic',
+			'|', 'link', 'insertImage', 'insertTable', 'mediaEmbed',
+			'|', 'bulletedList', 'numberedList', 'outdent', 'indent'
 		]
 	},
-	language: 'en',
-	table: {
-		contentToolbar: [
-			'tableColumn',
-			'tableRow',
-			'mergeTableCells',
-			'tableCellProperties',
-			'tableProperties'
-		]
-	}
+	language: 'en'
+	//,
+	//table: {
+	//	contentToolbar: [
+	//		'tableColumn',
+	//		'tableRow',
+	//		'mergeTableCells',
+	//		'tableCellProperties',
+	//		'tableProperties'
+	//	]
+	//}
 };
 
 export default Editor;

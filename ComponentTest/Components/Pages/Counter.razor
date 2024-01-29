@@ -1,0 +1,12 @@
+﻿@page "/counter"
+@rendermode InteractiveServer
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Hello, world => User Input: @userInput</h1>
+
+<RichEditor Id="str" @bind-Text="@userInput" />
+
+@code {
+    string userInput = string.Empty;
+}

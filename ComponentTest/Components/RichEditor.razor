@@ -20,15 +20,15 @@
     [Parameter]
     public Dictionary<string, object> Attributes { get; set; } = new();
     IJSObjectReference? javascript;
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        await JSRuntime.InvokeVoidAsync("alert", "123");
         if (firstRender)
         {
             try
             {
-                await JSRuntime.InvokeAsync<IJSObjectReference>("import","./_content/BlazorCKEditor/ckeditor/build/ckeditor.js");
-                var jsmodule = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/BlazorCKEditor/RichEditor.razor.js");
+                await JSRuntime.InvokeAsync<IJSObjectReference>("import", "/ckeditor/build/ckeditor.js");
+                var jsmodule = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "/ckeditor/build/RichEditor.js");
                 javascript = await jsmodule.InvokeAsync<IJSObjectReference>("GetInstance");
                 await javascript.InvokeVoidAsync("loadCKEditor", DotNetObjectReference.Create(this), Id);
                 await jsmodule.DisposeAsync();
