@@ -79,6 +79,7 @@ Editor.defaultConfig = {
 			'redo',
 			'|',
 			'blockQuote',
+			'insertImage',
 			'insertTable',
 			'mediaEmbed',
 			'fontBackgroundColor',
